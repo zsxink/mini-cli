@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "defaults": {
+    "provider": "remote",
+    "model": "gpt-3.5-turbo"
+  },
+  "providers": {
+    "remote": {
+      "baseUrl": "https://api.example.com/v1",
+      "apiKey": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "gpt-3.5-turbo",
+          "name": "通用远程大模型"
+        }
+      ]
+    },
+    "local": {
+      "baseUrl": "http://localhost:11434/v1",
+      "apiKey": "ollama",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "qwen:7b",
+          "name": "本地开源模型"
+        }
+      ]
+    }
+  }
+}
