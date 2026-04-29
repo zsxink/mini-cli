@@ -65,7 +65,7 @@ pip install -r requirements.txt
 （和第一章依赖完全一致，不需要额外安装新包）
 
 ### 2. 配置
-沿用第一章的`~/.min-cli/min-cli.json`配置即可，无需修改。
+沿用第一章的`~/.mini-cli/mini-cli.json`配置即可，无需修改。
 
 ### 3. 运行Agent
 ```bash
@@ -94,7 +94,7 @@ import sys
 import platform
 
 # 加载配置（和第一章完全一致）
-CONFIG_PATH = Path.home() / ".min-cli" / "min-cli.json"
+CONFIG_PATH = Path.home() / ".mini-cli" / "mini-cli.json"
 SYSTEM_PROMPT = """你是一个能干的AI助手，可以调用系统命令帮用户完成实际任务。
 当需要执行命令时，严格按照工具调用格式返回，不要直接回答。
 不要生成危险命令（删除系统文件、格式化磁盘、修改系统配置等）。"""

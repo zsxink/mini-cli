@@ -24,7 +24,7 @@
 └── chatbot.py    # 核心代码
 ```
 
-全局配置文件路径：`~/.min-cli/min-cli.json` （Windows下为 `C:\Users\xian\.min-cli\min-cli.json`）
+全局配置文件路径：`~/.mini-cli/mini-cli.json` （Windows下为 `C:\Users\xian\.mini-cli\mini-cli.json`）
 
 ### 2. 快速开始
 #### 步骤1：安装依赖
@@ -41,11 +41,11 @@ pip install openai==2.30.0
 #### 步骤2：配置API信息
 1. 复制项目中的配置示例文件到用户目录：
    ```bash
-   cp ../../config/min-cli.json.example ~/.min-cli/min-cli.json
+   cp ../../config/mini-cli.json.example ~/.mini-cli/mini-cli.json
    ```
-   （Windows下手动复制项目根目录下 `config/min-cli.json.example` 到 `C:\Users\xian\.min-cli\min-cli.json`）
+   （Windows下手动复制项目根目录下 `config/mini-cli.json.example` 到 `C:\Users\xian\.mini-cli\mini-cli.json`）
 
-2. 修改`~/.min-cli/min-cli.json`配置文件，填入你的API信息：
+2. 修改`~/.mini-cli/mini-cli.json`配置文件，填入你的API信息：
    ```json
    {
      "version": "1.0",
@@ -106,11 +106,11 @@ import json
 from pathlib import Path
 
 # 1. 加载全局配置
-CONFIG_PATH = Path.home() / ".min-cli" / "min-cli.json"
+CONFIG_PATH = Path.home() / ".mini-cli" / "mini-cli.json"
 DEFAULT_SYSTEM_PROMPT = "你是一个友好的AI助手，回答简洁准确。"
 
 def load_config():
-    """加载min-cli配置文件"""
+    """加载mini-cli配置文件"""
     if not CONFIG_PATH.exists():
         raise Exception(f"配置文件不存在，请先创建 {CONFIG_PATH}\n可以复制 {CONFIG_PATH}.example 进行修改")
 

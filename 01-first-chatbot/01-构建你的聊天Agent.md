@@ -26,12 +26,12 @@ pip install -r requirements.txt
 # 或者直接安装指定版本：pip install openai==2.30.0
 
 # 2. 复制配置文件
-cp ../../config/min-cli.json.example ~/.min-cli/min-cli.json
+cp ../../config/mini-cli.json.example ~/.mini-cli/mini-cli.json
 ```
 
 #### 2. 配置你的API密钥
 
-编辑 `~/.min-cli/min-cli.json`：
+编辑 `~/.mini-cli/mini-cli.json`：
 ```json
 {
   "defaults": {
@@ -63,7 +63,7 @@ import json
 from pathlib import Path
 
 # 加载全局配置
-CONFIG_PATH = Path.home() / ".min-cli" / "min-cli.json"
+CONFIG_PATH = Path.home() / ".mini-cli" / "mini-cli.json"
 SYSTEM_PROMPT = "你是一个友好的AI助手，回答简洁准确。"
 
 def load_config():

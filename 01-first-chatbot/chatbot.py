@@ -4,11 +4,11 @@ import json
 from pathlib import Path
 
 # 1. 加载全局配置
-CONFIG_PATH = Path.home() / ".min-cli" / "min-cli.json"
+CONFIG_PATH = Path.home() / ".mini-cli" / "mini-cli.json"
 DEFAULT_SYSTEM_PROMPT = "你是一个友好的AI助手，回答简洁准确。"
 
 def load_config():
-    """加载min-cli配置文件"""
+    """加载mini-cli配置文件"""
     if not CONFIG_PATH.exists():
         raise Exception(f"配置文件不存在，请先创建 {CONFIG_PATH}\n可以复制 {CONFIG_PATH}.example 进行修改")
 

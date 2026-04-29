@@ -6,7 +6,7 @@ import sys
 import platform
 
 # 加载配置（和第一章完全一致）
-CONFIG_PATH = Path.home() / ".min-cli" / "min-cli.json"
+CONFIG_PATH = Path.home() / ".mini-cli" / "mini-cli.json"
 os_type = platform.system()
 SYSTEM_PROMPT = f"""你是一个能干的AI助手，可以调用工具帮用户完成实际任务。
 当前运行的系统是：{os_type}
@@ -36,7 +36,7 @@ DANGEROUS_COMMANDS = [
 def load_config():
     """加载全局配置"""
     if not CONFIG_PATH.exists():
-        raise Exception(f"配置文件不存在，请先创建 {CONFIG_PATH}\n可以复制项目根目录下 config/min-cli.json.example 进行修改")
+        raise Exception(f"配置文件不存在，请先创建 {CONFIG_PATH}\n可以复制项目根目录下 config/mini-cli.json.example 进行修改")
 
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         config = json.load(f)
